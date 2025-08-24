@@ -1,0 +1,151 @@
+/* Общие стили */
+*{
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+ }
+body {
+    width:1100px;
+    max-width:100%;
+    margin:0px auto;
+    margin-bottom:100px;
+    background: url('food.png') no-repeat center center; /* добавляем фон */
+    background-size: cover; /* чтобы фон занимал весь экран */
+     background-attachment: fixed; /* фон остаётся на месте при скролле */
+}
+
+header {
+  padding: 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 24px;
+  text-align: left;
+}
+
+/* Картинка + текст */
+.image-text {
+  background: #bead6e;
+  padding: 20px;
+  text-align: center;
+  border-radius:28px;
+  border-radius: 40px 40px 0 0; /* верхний левый и верхний правый */
+}
+
+.image-text img {
+  max-width: 80%;
+  display: block;
+  margin: 0 auto 10px;
+  border-radius: 10px;
+}
+
+.image-text p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Музыка */
+.music-block {
+  background: #9b59b6;
+  padding: 20px;
+  text-align: center; /* Заголовок по центру */
+}
+
+.music-block h2 {
+  margin-bottom: 15px; 
+}
+
+.music-list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.music-list audio {
+  width: 40%;
+}
+
+
+/* Легенды */
+.legends {
+  background: #27ae60;
+  padding: 20px;
+  text-align: center;
+}
+
+.legends h2 {
+  margin-bottom: 10px;
+}
+
+.legends p {
+  text-align: left;   /* абзацы слева */
+  margin-bottom: 10px;
+}
+/* Потраченные легенды */
+.split-block {
+  background: #f39c12;
+  padding: 20px;
+}
+
+.split-block h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.columns p {
+  line-height: 1.6; /* расстояние между строками */
+  margin-bottom: 10px; /* отступ между абзацами */
+}
+
+
+.columns .left,
+.columns .right {
+  flex: 1;
+  padding: 15px;
+  background: rgba(165, 35, 35, 0.2);
+  border-radius: 8px;
+  border-radius: 28px 28px 28px 28px; 
+}
+
+/* Новое поколение */
+.new-gen {
+  background: #ef867a;
+  padding: 20px;
+  text-align: center;
+   border-radius: 0 0 40px 40px;
+}
+/* Адаптивность под телефоны */
+@media (max-width: 768px) {
+  .music-block {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .music-block audio {
+    width: 90%;
+    margin-bottom: 15px;
+  }
+
+  .columns {
+    flex-direction: column;
+  }
+
+  .columns .left,
+  .columns .right {
+    width: 100%;
+  }
+}
