@@ -13,7 +13,7 @@ body {
     margin-bottom:100px;
     background: url('food.png') no-repeat center center; /* добавляем фон */
     background-size: cover; /* чтобы фон занимал весь экран */
-     background-attachment: fixed; /* фон остаётся на месте при скролле */
+    background-attachment: fixed; /* фон остаётся на месте при скролле */
 }
 
 header {
@@ -127,6 +127,25 @@ header h1 {
   padding: 30px;
   text-align: center;
 }
+.vacancies h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;  /* центрируем по горизонтали весь контент */
+  gap: 10px; /* расстояние между картинкой и текстом */
+  font-size: 28px;
+}
+
+.vacancy-icon {
+  width: 30px;   /* размер мини-картинки */
+  height: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.vacancy-icon:hover {
+  transform: scale(1.2); /* эффект при наведении */
+}
+
 
 .vacancies h2 {
   margin-bottom: 20px;
@@ -176,6 +195,7 @@ header h1 {
   padding: 20px;
   text-align: center;
    border-radius: 0 0 40px 40px;
+   font-size: 20px;
 }
 /* Адаптивность под телефоны */
 @media (max-width: 768px) {
