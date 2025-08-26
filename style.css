@@ -133,7 +133,7 @@ main {
 /* Адаптивность под телефоны */
 @media (max-width: 768px) {
   body {
-    margin: 0;
+    margin: 20px 2px; /* сверху и снизу 20px, по бокам 0 */
     padding: 0;
   }
 
@@ -155,4 +155,5 @@ main {
     width: 100%;
   }
 }
+
 
