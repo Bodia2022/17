@@ -1,0 +1,153 @@
+/* Общие стили */
+*{
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+ }
+body {
+    width:1200px;
+    max-width:100%;
+    margin:20px auto;
+    margin-bottom:100px;
+    background: url('xx.jpg') no-repeat center center; /* добавляем фон */
+    background-size: cover; /* чтобы фон занимал весь экран */
+    background-attachment: fixed; /* фон остаётся на месте при скролле */
+}
+
+/* Шапка */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #333;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.logo-img {
+  width: 40px;       /* размер картинки */
+  height: 40px;      /* можно auto или подобрать под дизайн */
+  margin-right: 10px; /* отступ между картинкой и текстом */
+}
+
+/* Кнопка меню */
+.dropbtn {
+  background-color: #333;
+  color: rgb(255, 255, 255);
+  padding: 10px 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  border-radius: 30px; /* закруглённые углы кнопки */
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: -20px;
+  background-color: rgb(237, 237, 237);
+  min-width: 16px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 20px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  white-space: nowrap;
+  border-radius: 20px;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Показываем меню при наведении */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #444;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 24px;
+  text-align: left;
+}
+
+main {
+    background-color: #f18c51; /* цвет фона, можно изменить */
+    border-radius: 20px;       /* радиус скругления углов */
+    padding: 20px;             /* внутренние отступы, чтобы текст не прилипал к краям */
+    margin: 20px auto;         /* внешний отступ сверху и снизу, по центру по горизонтали */
+    max-width: 1200px;         /* чтобы не растягивался слишком сильно на больших экранах */
+}
+
+/* Картинка + текст */
+.image-text {
+  background: #697ef7;
+  padding: 20px;
+  text-align: center;
+  border-radius:28px;
+  border-radius: 40px 40px 0 0; /* верхний левый и верхний правый */
+}
+
+.image-text img {
+  max-width: 80%;
+  display: block;
+  margin: 0 auto 10px;
+  border-radius: 10px;
+}
+
+
+.image-text p {
+  font-weight: bold;
+  font-size: 25px;   /* размер шрифта */
+  line-height: 1.5;  /* межстрочный интервал */
+  color: #fff;       /* если фон тёмный, чтобы было видно */
+  white-space: pre-line; /* переносы будут работать */
+}
+
+/* Адаптивность под телефоны */ 
+@media (max-width: 768px) {
+  .music-block {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .music-block audio {
+    width: 90%;
+    margin-bottom: 15px;
+  }
+
+  .columns {
+    flex-direction: column;
+  }
+
+  .columns .left,
+  .columns .right {
+    width: 100%;
+  }
+}
