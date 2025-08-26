@@ -131,25 +131,20 @@ main {
 }
 
 
-
 /* Адаптивность под телефоны */
 @media (max-width: 768px) {
-  .music-block {
-    flex-direction: column;
-    align-items: center;
+  .hall-of-fame {
+    grid-template-columns: 1fr; /* 1 блок в ряд */
+    padding: 10px;
   }
 
-  .music-block audio {
-    width: 90%;
-    margin-bottom: 15px;
+  .fame-block {
+    max-width: 100%;   /* блоки растягиваются по ширине */
   }
 
-  .columns {
-    flex-direction: column;
-  }
-
-  .columns .left,
-  .columns .right {
-    width: 100%;
+  body {
+    margin: 10px; /* чтобы на телефоне не прилипало к краю */
   }
 }
+
+
