@@ -139,24 +139,25 @@ main {
   }
 
   main {
-    max-width: 100%;
-    margin: 20px auto;       /* отступ сверху и снизу */
-    padding: 10px 15px;      /* отступ сверху/снизу и слева/справа */
+    max-width: 100%;  /* важно */
+    margin: 20px auto; 
+    padding: 10px;    /* отступ со всех сторон */
   }
 
   .hall-of-fame {
-    grid-template-columns: 1fr;  /* один блок в ряд */
-    max-width: 100%;
-    padding: 10px 15px;          /* отступ сверху/снизу и слева/справа */
-    gap: 15px;                    /* расстояние между блоками */
-    margin: 0 auto;               /* центрируем */
+    grid-template-columns: 1fr; /* один блок в ряд */
+    max-width: 100%;            /* важно */
+    padding: 10px;              /* отступ со всех сторон */
+    gap: 15px;
+    margin: 0 auto;
   }
 
   .fame-block {
     width: 100%;
-    max-width: 100%;
   }
 }
+
+
 
 
 
