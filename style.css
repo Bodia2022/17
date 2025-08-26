@@ -7,9 +7,9 @@
     box-sizing: border-box;
  }
 body {
-    width:1300px;
+    width:1200px;
     max-width:100%;
-    margin:30px auto;
+    margin:20px auto;
     margin-bottom:100px;
     background: url('bl.jpg') no-repeat center center; /* добавляем фон */
     background-size: cover; /* чтобы фон занимал весь экран */
@@ -130,7 +130,6 @@ main {
   background: #552a70; /* фон блока 3-й фотки */
 }
 
-
 /* Адаптивность под телефоны */
 @media (max-width: 768px) {
   body {
@@ -156,15 +155,4 @@ main {
     width: 100%;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
 
