@@ -1,0 +1,155 @@
+/* Общие стили */
+*{
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+ }
+body {
+    width:1300px;
+    max-width:100%;
+    margin:30px auto;
+    margin-bottom:100px;
+    background: url('bl.jpg') no-repeat center center; /* добавляем фон */
+    background-size: cover; /* чтобы фон занимал весь экран */
+    background-attachment: fixed; /* фон остаётся на месте при скролле */
+}
+
+/* Шапка */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #333;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.logo-img {
+  width: 40px;       /* размер картинки */
+  height: 40px;      /* можно auto или подобрать под дизайн */
+  margin-right: 10px; /* отступ между картинкой и текстом */
+}
+
+/* Кнопка меню */
+.dropbtn {
+  background-color: #333;
+  color: white;
+  padding: 10px 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  border-radius: 30px; /* закруглённые углы кнопки */
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: -20px;
+  background-color: rgb(237, 237, 237);
+  min-width: 16px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 20px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  white-space: nowrap;
+  border-radius: 20px;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Показываем меню при наведении */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #444;
+}
+
+main {
+    background-color: #189fa1; /* цвет фона, можно изменить */
+    border-radius: 20px;       /* радиус скругления углов */
+    padding: 20px;             /* внутренние отступы, чтобы текст не прилипал к краям */
+    margin: 20px auto;         /* внешний отступ сверху и снизу, по центру по горизонтали */
+    max-width: 1200px;         /* чтобы не растягивался слишком сильно на больших экранах */
+}
+
+.hall-of-fame {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 блока в ряд */
+  gap: 20px; /* расстояние между блоками */
+  padding: 20px;
+}
+
+.fame-block {
+  text-align: center;
+  background: rgb(25, 147, 108); /* фон (можно убрать) */
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.fame-block img {
+  width: 100%;              /* растягиваем на всю ширину блока */
+  aspect-ratio: 3 / 4;     /* все фото одинаковые, 16:9 */
+  object-fit: cover;        /* лишнее обрезается, но выглядит ровно */
+  border-radius: 8px;
+  display: block;           /* убираем пробелы снизу */
+}
+
+.fame-block p {
+  margin-top: 8px;
+  font-size: 16px;
+  color: #fff;
+}
+.fame-block:nth-child(3) {
+  background: #552a70; /* фон блока 3-й фотки */
+}
+
+
+
+/* Адаптивность под телефоны */
+@media (max-width: 768px) {
+  .music-block {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .music-block audio {
+    width: 90%;
+    margin-bottom: 15px;
+  }
+
+  .columns {
+    flex-direction: column;
+  }
+
+  .columns .left,
+  .columns .right {
+    width: 100%;
+  }
+}
