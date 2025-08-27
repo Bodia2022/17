@@ -168,6 +168,10 @@ main p {
     margin: 20px 0; /* сверху и снизу 20px, по бокам 0 */
     padding: 0;
   }
+    .socials .insta-icon {
+    width: 24px;   /* уменьшаем ширину иконок */
+    height: 24px;  /* фиксируем высоту */
+  }
 
   main {
     max-width: 100%;  /* важно */
@@ -187,4 +191,5 @@ main p {
     width: 100%;
   }
 }
+
 
