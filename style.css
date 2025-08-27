@@ -7,7 +7,7 @@
     box-sizing: border-box;
  }
 body {
-    width:1200px;
+    width:1300px;
     max-width:100%;
     margin:20px auto;
     margin-bottom:100px;
@@ -99,6 +99,10 @@ main {
     max-width: 1200px;         /* чтобы не растягивался слишком сильно на больших экранах */
 }
 
+main p { 
+    margin: 10px 0;
+    font-size: 19px; /* размер шрифта */
+}
 .hall-of-fame {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 блока в ряд */
@@ -129,6 +133,34 @@ main {
 .fame-block:nth-child(3) {
   background: #552a70; /* фон блока 3-й фотки */
 }
+.fame-block .insta-link {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.fame-block .insta-icon {
+  display: block;
+  margin: 0 auto;
+  width: 32px;
+  height: 32px;
+  transition: transform 0.2s ease;
+}
+
+.fame-block .insta-icon:hover {
+  transform: scale(1.1);
+}
+.socials {
+  display: flex;
+  justify-content: center; /* выравнивание по центру */
+  gap: 10px;               /* расстояние между иконками */
+  margin-top: 10px;
+}
+
+.socials a {
+  display: inline-flex;
+}
+
 
 /* Адаптивность под телефоны */
 @media (max-width: 768px) {
@@ -155,6 +187,4 @@ main {
     width: 100%;
   }
 }
-
-
 
