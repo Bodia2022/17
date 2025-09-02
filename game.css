@@ -215,19 +215,28 @@ main p {
 @media (max-width: 768px) {
 
   .image-text {
-   width: 80%;         /* ширина блока от родителя */
-   max-width: 900px;   /* ограничение на больших экранах */
-   margin: 0 auto 20px auto; /* центрирование */
-   padding: 20px;
-   border-radius: 40px;
-}
-
-  .columns {
-    flex-direction: column;
+    width: 95%;             /* почти весь экран */
+    max-width: 600px;       /* ограничение */
+    margin: 20px auto;      /* отступы сверху и снизу */
+    padding: 20px;
+    border-radius: 25px;    /* чуть меньше, чтобы не выглядело громоздко */
+    transform: translateX(0); /* убираем смещение */
   }
 
-  .columns .left,
-  .columns .right {
-    width: 100%;
+  .image-text:nth-child(even),
+  .image-text:nth-child(odd) {
+    transform: translateX(0); /* все блоки по центру */
+  }
+
+  /* Картинка справа */
+  .image-text::after {
+    width: 40%;           /* увеличиваем, чтобы было видно */
+    opacity: 0.25;        /* немного прозрачнее, чтобы текст не сливался */
+    right: 5%;            /* чуть отступаем от правого края */
+  }
+
+  .image-text p {
+    font-size: 20px;      /* уменьшаем шрифт для мобильного */
+    line-height: 1.4;
   }
 }
