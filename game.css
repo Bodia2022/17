@@ -119,7 +119,7 @@ main::after {
     position: absolute;
     top: 0;
     right: 0;
-    width: 13%;       /* картинка занимает 30% ширины блока */
+    width: 40%;       /* картинка занимает 30% ширины блока */
     height: 100%;     /* на всю высоту блока */
     background: url("pl.png") center/cover no-repeat;
     opacity: 0.3;     /* прозрачность картинки */
@@ -211,32 +211,27 @@ main p {
   transform: translateX(0) scale(1.02);
 }
 
-/* Адаптивность под телефоны */ 
+/* Адаптивность для телефонов */
 @media (max-width: 768px) {
 
   .image-text {
-    width: 95%;             /* почти весь экран */
-    max-width: 600px;       /* ограничение */
-    margin: 20px auto;      /* отступы сверху и снизу */
-    padding: 20px;
-    border-radius: 25px;    /* чуть меньше, чтобы не выглядело громоздко */
-    transform: translateX(0); /* убираем смещение */
+    width: 95%;           /* блок почти на всю ширину */
+    max-width: 500px;     
+    padding: 15px 20px;
+    border-radius: 25px;
+    transform: translateX(0); /* центрируем */
   }
 
-  .image-text:nth-child(even),
-  .image-text:nth-child(odd) {
-    transform: translateX(0); /* все блоки по центру */
-  }
-
-  /* Картинка справа */
-  .image-text::after {
-    width: 40%;           /* увеличиваем, чтобы было видно */
-    opacity: 0.25;        /* немного прозрачнее, чтобы текст не сливался */
-    right: 5%;            /* чуть отступаем от правого края */
+  /* Чередование сохраняется, но картинка шире (40% блока) */
+  .image-text:nth-child(even)::after,
+  .image-text:nth-child(odd)::after {
+    width: 50%;           
+    right: 0;
+    opacity: 0.25;
   }
 
   .image-text p {
-    font-size: 20px;      /* уменьшаем шрифт для мобильного */
+    font-size: 16px;
     line-height: 1.4;
   }
 }
