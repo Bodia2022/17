@@ -7,15 +7,13 @@
     box-sizing: border-box;
  }
 body {
-    width: 1100px;
-    max-width: 100%;
-    margin: 20px auto 10px auto; /* убрали margin-bottom */
-    min-height: 100vh;        /* body занимает весь экран */
-    display: flex;
-    flex-direction: column;   /* для футера внизу */
-    background: url('sea.jpg') no-repeat center center;
-    background-size: cover;
-    background-attachment: fixed;
+    width:1100px;
+    max-width:100%;
+    margin: 20px auto 0 auto;
+    margin-bottom:100px;
+    background: url('sea.jpg') no-repeat center center; /* добавляем фон */
+    background-size: cover; /* чтобы фон занимал весь экран */
+    background-attachment: fixed; /* фон остаётся на месте при скролле */
 }
 
 /* Шапка */
@@ -258,4 +256,5 @@ main p {
     line-height: 1.4;
   }
 }
+
 
