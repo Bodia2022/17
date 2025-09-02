@@ -211,6 +211,27 @@ main p {
   transform: translateX(0) scale(1.02);
 }
 
+.site-footer {
+  text-align: center;           /* по центру */
+  padding: 20px 0;              /* отступ сверху и снизу */
+  background: rgba(0,0,0,0.7);  /* полупрозрачный тёмный фон */
+  color: #fff;                  /* белый текст */
+  font-size: 14px;              /* чуть меньше стандартного текста */
+  letter-spacing: 0.5px;        /* красивый разрыв между буквами */
+  border-top: 1px solid rgba(255,255,255,0.2); /* тонкая линия сверху */
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  border-radius: 20px;
+}
+.site-footer a {
+  color: #ffd700; /* золотой для ссылок */
+  text-decoration: none;
+}
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
 /* Адаптивность для телефонов */
 @media (max-width: 768px) {
 
